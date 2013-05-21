@@ -1,38 +1,81 @@
 import java.awt.*;
-import javax.swing.*;        
 
-public class menu {
+import javax.swing.*; 
+import java.awt.event.*;
 
-    public static void createAndShowGUI() {
-        //Fenster
-        JFrame frame = new JFrame("DC");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500,500);
-        frame.setVisible(true);
-        frame.setLayout(null);
-        frame.getContentPane().setBackground(Color.BLACK);
-        
-        
+class menu extends JFrame implements ActionListener {
+	 
+    JButton start;
+    JButton einst;
+    JButton ende;
+    JButton blabber;
+
+    	
+   public menu() {
+     
+    	//Fenster
+        this.setTitle("Menü");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(500,500);
+        this.setVisible(true);
+        this.setLayout(null);
+	
+        // Hintergrund
+        this.setContentPane(new JLabel(new ImageIcon(("img/geisthintergrund.png"))));
+        this.pack();
+              
         //Buttons
-                
-        JButton start = new JButton("Start");
-        start.setBounds(200, 75, 100, 100);
-        start.addActionListener(null);
-        frame.add(start);
+        start = new JButton("Start");
+        start.setBounds(100, 275, 100, 50 );
+        start.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent e) {
+        start();
+        }});
+        this.add(start);
         
-        JButton einst = new JButton("Einstellungen");
-        einst.setBounds(200,175,100,100);
-        einst.addActionListener(null);
-        frame.add(einst);     
+        einst = new JButton("Einstellungen");
+        einst.setBounds(200,275,100,50);
+        einst.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent e) {
+        addbutton();
+        }});       
+        this.add(einst);
         
-        JButton ende = new JButton("Ende");
-        ende.setBounds(200,275,100,100);
-        ende.addActionListener(null);
-        frame.add(ende);             
+        
+        ende = new JButton("Ende");
+        ende.setBounds(300,275,100,50);
+        ende.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent e) {
+        System.exit(0);
+        }});
+        this.add(ende); 
 
     }
 
-    public static void main(String[] args) {
 
-                createAndShowGUI();
-            }}
+   public void addbutton()
+   {
+	   blabber = new JButton("Blabber");
+	   blabber.setBounds(200,0,100,50);
+	   this.add(blabber);
+   }
+   
+   public void start()
+   {
+	   JFrame spiel = new JFrame("Spiel");
+       spiel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       spiel.setSize(500,500);
+       spiel.setVisible(true);
+       this.setVisible(false);
+   }
+   
+   
+    public static void main(String[] args)
+    {
+         menu a = new menu();
+         a.setVisible(true);
+    }
+
+
+	public void actionPerformed(ActionEvent buttons) {
+	}}
