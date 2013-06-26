@@ -60,7 +60,7 @@ public class player{
 	//Die+Damage
 	public void die(){
 	  this.hp = this.hp-25;
-	  if(this.hp==0)
+	  if(this.hp<=0)
 	  {
 	  this.lifes--;
 	  this.pos = this.savePos.copy();
