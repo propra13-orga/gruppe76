@@ -1,6 +1,7 @@
-import java.awt.*;
 
 import javax.swing.*; 
+import javax.swing.JOptionPane;
+
 import java.awt.event.*;
 
 class menu extends JFrame implements ActionListener {
@@ -9,7 +10,6 @@ class menu extends JFrame implements ActionListener {
     JButton einst;
     JButton ende;
     JButton blabber;
-
     	
    public menu() {
      
@@ -52,7 +52,6 @@ class menu extends JFrame implements ActionListener {
 
     }
 
-
    public void addbutton()
    {
 	   blabber = new JButton("Blabber");
@@ -62,18 +61,20 @@ class menu extends JFrame implements ActionListener {
    
    public void start()
    {
-	   JFrame spiel = new JFrame("Spiel");
-       spiel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       spiel.setSize(500,500);
-       spiel.setVisible(true);
-       this.setVisible(false);
-   }
-   
+
+	 	J2D.start();
+	 	this.dispose();
+ 					
+	}
+		
    
     public static void main(String[] args)
     {
-         menu a = new menu();
+    	 menu a = new menu();
          a.setVisible(true);
+         J2D.gamestart();
+         
+          		
     }
 
 
