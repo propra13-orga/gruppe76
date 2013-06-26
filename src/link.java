@@ -1,9 +1,9 @@
 public class link{
   
-  public vec  in = null;  //Eingang
-  public vec out = null;  //Ausgang
+  private vec  in = null;  //Eingang
+  private vec out = null;  //Ausgang
   
-  public int move = -1;  //0=W=Oben; 1=A=Links; 2=S=Unten; 3=D=Rechts;
+  private int move = -1;  //0=W=Oben; 1=A=Links; 2=S=Unten; 3=D=Rechts;
   
   //Konstruktor
   public link(vec in, vec out, int x){
@@ -13,8 +13,10 @@ public class link{
   }
   
   public link(int inX, int inY, int inIndex, int outX, int outY, int outIndex){
-    vec in = new vec(inX,inY,inIndex);
-    vec out = new vec(outX,outY,outIndex);
+    vec in = null;
+    vec out = null;
+	in = new vec(inX,inY,inIndex);
+	out = new vec(outX,outY,outIndex);
     this.in = in;
 	this.out = out;
   }

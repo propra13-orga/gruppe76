@@ -1,11 +1,12 @@
 import java.io.*;
+import java.util.*;
 
 public class field{
   
-  public int sizeX = -1;  //Breite des Feldes
-  public int sizeY = -1;  //Höhe des Feldes
+  private int sizeX = -1;  //Breite des Feldes
+  private int sizeY = -1;  //Höhe des Feldes
   
-  public String[][] f = null;  //Spielfeld
+  private String[][] f = null;  //Spielfeld
   
   //Konstruktor
   public field(int x, int y){
@@ -21,6 +22,9 @@ public class field{
   
   //getH()
   public int getH(){ return this.sizeY; }
+  
+  //getF()
+  public String[][] getF(){ return this.f; }
   
   //search()
   public vec search(String s){
@@ -53,7 +57,8 @@ public class field{
   
   //rebuild() Feld erneuern
   private void rebuild(){
-    String[][] tmp = new String[this.sizeX][this.sizeY];
+    String[][] tmp = null;
+	tmp = new String[this.sizeX][this.sizeY];
 	this.f = tmp;
   }
   

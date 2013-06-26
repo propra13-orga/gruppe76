@@ -1,9 +1,9 @@
 maps:
-rooms\1.room
-rooms\3.room
-rooms\r2.room
-rooms\8.room
-rooms\14.room
+rooms/1.room
+rooms/3.room
+rooms/r2.room
+rooms/8.room
+rooms/14.room
 #
 start:
 2,0,7

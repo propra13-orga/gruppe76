@@ -49,6 +49,7 @@ import java.net.*;
 import java.awt.*;
 import java.awt.geom.*;
 import java.awt.event.*;
+import java.awt.geom.AffineTransform;
 import java.awt.image.*;
 import javax.swing.*;
 import javax.imageio.ImageIO;
@@ -188,48 +189,9 @@ public static int createDevice(int Width,int Height,String sName){
 
  frame.pack();
  frame.requestFocusInWindow();
- frame.setVisible(false);
+ frame.setVisible(true);
  return 1;
 }
-
-public static void start()
-{frame.setVisible(true);
-	}
-
-private static boolean gameRunning;
-
-public static void gamestart()
-{J2D.createDevice(960, 720, "Dungeon Crawler v0.6.0");
-	// 2D Klasse initialisieren
-	String testlevel = null;
-	testlevel = "lvl/lvl0.lvl";
- gameplay game = new gameplay();
-	game.init(testlevel);
-	gameRunning = true;
-	while(gameRunning){
-		//Rendert neues Bild
-		game.render();
-		
-		// Thread verzoegern
-		try { 
-			Thread.sleep(10);
-		}
-		
-		
-		catch(InterruptedException e) {
-		}
-		
-	}
-	}
-public static void monster()
-{frame.dispose();
-frame = null;
-init();
-menu b = new menu();
-b.setVisible(true);
-gamestart();
-}
-
 //}
 
 //{ Sprites
@@ -249,7 +211,7 @@ public static Image createSprite(String fileName){ //Uebernommen aus der StdDraw
   if ((icon == null) || (icon.getImageLoadStatus() != MediaTracker.COMPLETE)) {
     URL url = J2D.class.getResource(fileName);
     if (url == null) throw new RuntimeException("image " + fileName + " not found");
-   icon = new ImageIcon(url);
+    icon = new ImageIcon(url);
   }
   
   //Gibt das Icon im Image Format zurueck
@@ -412,6 +374,18 @@ public static int drawSprite(Image i, double x, double y) {
  if (ws < 0 || hs < 0) return 0;
  
  offscreen.drawImage(i, (int)x, (int)y, null); 
+ 
+ return 1;
+}
+
+
+public static int drawSprite(Image i, double x, double y, int w, int h) {
+  if(lockScene == true) return 2;
+ int ws = i.getWidth(null);
+ int hs = i.getHeight(null);
+ if (ws < 0 || hs < 0) return 0;
+ 
+ offscreen.drawImage(i, (int)x, (int)y, w, h, null); 
  
  return 1;
 }

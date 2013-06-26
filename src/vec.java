@@ -1,8 +1,8 @@
 public class vec{
   
-  public int x = -1;  //X-Coord
-  public int y = -1;  //Y-Coord
-  public int z = -1;  //Z-Coord
+  private int x = -1;  //X-Coord
+  private int y = -1;  //Y-Coord
+  private int z = -1;  //Z-Coord
   
   //Konstruktor
   public vec(int x, int y, int z){
@@ -40,19 +40,20 @@ public class vec{
   
   //copy()
   public vec copy(){
-    vec out = new vec(this.x,this.y,this.z);
+    vec out = null;
+	out = new vec(getX(),getY(),getZ());
 	return out;
   }
   
   //compare()
   public boolean compare(vec v){
-    if(v.x==this.x && v.y==this.y && v.z==this.z){ return true; }
+    if(v.getX()==getX() && v.getY()==getY() && v.getZ()==getZ()){ return true; }
 	else{ return false; }
   }
   
   //print()
   public void print(){
-    System.out.print(this.x + "," + this.y + "," + this.z);
+    System.out.println(getX() + "," + getY() + "," + getZ());
   }
   
 }
