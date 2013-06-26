@@ -1,0 +1,39 @@
+/*
+player
+	curhp
+	maxhp
+	equip
+	set
+		armor
+		damage
+*/
+
+public class scriptengine{
+
+	private playerclass pc;
+
+	public scriptengine(playerclass pc){
+		this.pc = pc;
+	}
+	
+	public boolean executescript(String command){
+		String[] s = command.split(" ");
+		if(s[0].equals("player")){
+			if(s[1].equals("curhp"){
+				if(s[2].equals("increase"){
+					p.curhp = p.curhp + Integer.parseInt(s[3]);
+					if(p.curhp > p.hp){
+						p.curhp = p.hp;
+					}
+				}
+				if(s[2].equals("decrease"){
+				
+				}
+			}
+		}
+		else{
+			return false;
+		}
+	}
+
+}

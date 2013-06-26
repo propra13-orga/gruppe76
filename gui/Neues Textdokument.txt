@@ -1,0 +1,3 @@
+farbton: 	180
+sättigung: 	33
+helligkeit: 	-5
