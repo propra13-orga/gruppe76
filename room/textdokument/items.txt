@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Itemliste für DungeonCrawler -->
+<!-- Nur zeilenweises Kommentieren wird vom Parser unterstützt! -->
+<itemlist>
+	<!-- Heiltrank HP-->
+	<item>
+		<name>HP-Trank klein</name>
+		<use>true</use>
+		<equip>false</equip>
+		<carry>true</carry>
+		<cost>20</cost>
+		<!-- Aktuelle HP des Spielers um 20 auffüllen -->
+		<effect>player curhp increase 20</effect>
+		<text>Ein Trank der verlorene Kraft zurückbringt.</text>
+	</item>
+	<item>
+		<name>HP-Trank mittel</name>
+		<use>true</use>
+		<equip>false</equip>
+		<carry>true</carry>
+		<cost>400</cost>
+		<!-- Aktuelle HP des Spielers um 40 auffüllen -->
+		<effect>player curhp increase 40</effect>
+		<text>Ein Trank der verlorene Kraft zurückbringt.</text>
+	</item>
+	<item>
+		<name>HP-Trank groß</name>
+		<use>true</use>
+		<equip>false</equip>
+		<carry>true</carry>
+		<cost>60</cost>
+		<!-- Aktuelle HP des Spielers um 60 auffüllen -->
+		<effect>player curhp increase 60</effect>
+		<text>Ein Trank der verlorene Kraft zurückbringt.</text>
+	</item>
+	
+	<!-- Heiltrank MP-->
+	<item>
+		<name>MP-Trank klein</name>
+		<use>true</use>
+		<equip>false</equip>
+		<carry>true</carry>
+		<cost>20</cost>
+		<!-- Aktuelle MP des Spielers um 20 auffüllen -->
+		<effect>player curmp increase 20</effect>
+		<text>Ein Trank der verlorene Zauberkraft zurückbringt.</text>
+	</item>
+	<item>
+		<name>MP-Trank mittel</name>
+		<use>true</use>
+		<equip>false</equip>
+		<carry>true</carry>
+		<cost>40</cost>
+		<!-- Aktuelle MP des Spielers um 40 auffüllen -->
+		<effect>player curmp increase 40</effect>
+		<text>Ein Trank der verlorene Zauberkraft zurückbringt.</text>
+	</item>
+	<item>
+		<name>MP-Trank groß</name>
+		<use>true</use>
+		<equip>false</equip>
+		<carry>true</carry>
+		<cost>60</cost>
+		<!-- Aktuelle MP des Spielers um 60 auffüllen -->
+		<effect>player curmp increase 60</effect>
+		<text>Ein Trank der verlorene Zauberkraft zurückbringt.</text>
+	</item>
+	
+	<!-- Schwert -->
+	<item>
+		<name>Hölzernes Schwert</name>
+		<use>false</use>
+		<equip>true</equip>
+		<carry>true</carry>
+		<cost>40</cost>
+		<!-- Eine Waffe vom Typ Schwert ausrüsten. Schaden: 3 -->
+		<effect>player equip weapon sword;player set damage 3</effect>
+		<text>Ein altes hölzernes Schwert. Besser als nichts.</text>
+	</item>
+	<item>
+		<name>Rostiges Schwert</name>
+		<use>false</use>
+		<equip>true</equip>
+		<carry>true</carry>
+		<cost>60</cost>
+		<!-- Eine Waffe vom Typ Schwert ausrüsten. Schaden: 5 -->
+		<effect>player equip weapon sword;player set damage 5</effect>
+		<text>Ein rostiges altes Schwert. Besser als nichts.</text>
+	</item>
+	<item>
+		<name>Stumpfes Schwert</name>
+		<use>false</use>
+		<equip>true</equip>
+		<carry>true</carry>
+		<cost>80</cost>
+		<!-- Eine Waffe vom Typ Schwert ausrüsten. Schaden: 7 -->
+		<effect>player equip weapon sword;player set damage 7</effect>
+		<text>Ein altes stumpfes Schwert. Besser als nichts.</text>
+	</item>
+	<item>
+		<name>Scharfes Schwert</name>
+		<use>false</use>
+		<equip>true</equip>
+		<carry>true</carry>
+		<cost>100</cost>
+		<!-- Eine Waffe vom Typ Schwert ausrüsten. Schaden: 10 -->
+		<effect>player equip weapon sword;player set damage 10</effect>
+		<text>Ein altes scharfes Schwert. Besser als nichts.</text>
+	</item>
+	
+	<!-- Rüstung -->
+	<item>
+		<name>Baumwolltoga</name>
+		<use>false</use>
+		<equip>true</equip>
+		<carry>true</carry>
+		<cost>20</cost>
+		<!-- Eine Rüstung ausrüsten. Rüstung: 2 -->
+		<effect>player set armor 2</effect>
+		<text>Ein Baumwollgewand. Immerhin besser als nichts.</text>
+	</item>
+	<item>
+		<name>Rostiges Kettenhemd</name>
+		<use>false</use>
+		<equip>true</equip>
+		<carry>true</carry>
+		<cost>40</cost>
+		<!-- Eine Rüstung ausrüsten. Rüstung: 5 -->
+		<effect>player set armor 5</effect>
+		<text>Ein rostiges Kettenhemd. Immerhin schnittfester als Haut.</text>
+	</item>
+	<item>
+		<name>Ledergewand</name>
+		<use>false</use>
+		<equip>true</equip>
+		<carry>true</carry>
+		<cost>45</cost>
+		<!-- Eine Rüstung ausrüsten. Rüstung: 4 -->
+		<effect>player set armor 4</effect>
+		<text>Ein ledernes Gewand. Immerhin besser als nichts.</text>
+	</item>
+	<item>
+		<name>Metall Rüstung</name>
+		<use>false</use>
+		<equip>true</equip>
+		<carry>true</carry>
+		<cost>50</cost>
+		<!-- Eine Rüstung ausrüsten. Rüstung: 10 -->
+		<effect>player set armor 10</effect>
+		<text>Ein metallene Rüstung. So ist man gut geschützt.</text>
+	</item>
+	<item>
+		<name>Geldbeutel klein</name>
+		<use>false</use>
+		<equip>false</equip>
+		<carry>false</carry>
+		<cost>0</cost>
+		<!-- Geld des Spielers erhöhen. -->
+		<effect>player money increase 50</effect>
+		<text>Ein Geldbeutel, der Geld enthält!</text>
+	</item>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</itemlist>
