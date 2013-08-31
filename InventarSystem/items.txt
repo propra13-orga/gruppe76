@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Itemliste für DungeonCrawler -->
+<!-- Nur zeilenweises Kommentieren wird vom Parser unterstützt! -->
+<itemlist>
+	<!-- Heiltrank -->
+	<item>
+		<name>Heiltrank</name>
+		<use>true</use>
+		<equip>false</equip>
+		<carry>true</carry>
+		<cost>20</cost>
+		<!-- Aktuelle HP des Spielers um 20 auffüllen -->
+		<effect>player curhp increase 20;</effect>
+		<text>Ein Trank der verlorene Kraft zurückbringt.</text>
+	</item>
+	
+	<!-- Schwert -->
+	<item>
+		<name>Schwert</name>
+		<use>false</use>
+		<equip>true</equip>
+		<carry>true</carry>
+		<cost>100</cost>
+		<!-- Eine Waffe vom Typ Schwert ausrüsten. Schaden: 5 -->
+		<effect>player equip weapon sword;player set damage 5;</effect>
+		<text>Ein altes Schwert. Besser als nichts.</text>
+	</item>
+	
+	<!-- Schwert -->
+	<item>
+		<name>Kettenhemd</name>
+		<use>false</use>
+		<equip>true</equip>
+		<carry>true</carry>
+		<cost>50</cost>
+		<!-- Eine Waffe vom Typ Schwert ausrüsten. Schaden: 5 -->
+		<effect>player set armor 2;</effect>
+		<text>Ein rostiges Kettenhemd. Immerhin schnittfester als Haut.</text>
+	</item>
+	
+</itemlist>
